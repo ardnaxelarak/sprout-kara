@@ -20,6 +20,7 @@ function get_dependencies() {
 }
 
 function main() {
+  sudo true
   clear_chruby
   use_local_gems
   get_dependencies

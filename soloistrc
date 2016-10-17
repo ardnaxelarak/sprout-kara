@@ -35,36 +35,27 @@ recipes:
 - sprout-osx-apps::textmate_preferences
 - sprout-jetbrains-editors::rubymine
 
+- sprout-kara
+
 node_attributes:
   sprout:
     git:
-      domain: pivotal.io
       authors:
-        - initials: ah
-          name: Abhijit Hiremagalur
-          username: abhi
-        - initials: bc
-          name: Brian Cunnie
-          username: cunnie
-        - initials: jrhb
-          name: Jonathan Barnes
-        - initials: lw
-          name: Luke Winikates
-          username: lwinikates
+        - initials: ka
+          name: Kara Alexandra
+          email: ardnaxelarak@gmail.com
       projects:
-        -
-          name: sprout-wrap
-          url: https://github.com/pivotal-sprout/sprout-wrap.git
+        - name: sprout-kara
+          url: https://github.com/ardnaxeralak/sprout-kara.git
     terminal:
       default_profile: 'Pro'
     settings:
       clock_format: EEE MMM d  h:mm:ss a
-    dock_preferences:
-      orientation: 'left'
-      auto_hide: true
-      clear_apps: true
-      tile_size: 35
-      magnification: false
+  bash_it:
+    custom_plugins:
+      sprout-kara:
+        - bash_it/custom/dev_docker_tools.bash
+        - bash_it/custom/get_back_to_work.bash
   homebrew:
     taps:
       - universal-ctags/universal-ctags
@@ -74,6 +65,7 @@ node_attributes:
       - ag
       - chromedriver
       - imagemagick
+      - fswatch
       - node
       - pstree
       - qt
@@ -98,3 +90,4 @@ node_attributes:
       - virtualbox
       - xquartz
       - xscope
+      - dockertools
